@@ -107,29 +107,42 @@ const objLat = (obj) => {
 const cvFormatter = (arr) => {
   let cvarr = [];
 
-  class Names {
-        constructor(fullName, tech) {
+  /*function Object (fullName, tech) {
             this.fullName = fullName;
             this.tech = tech;
         }
-    }
+    */
 
 
   for (let i = 0; i < arr.length; i++) {
     let item = arr[i];
     if (item.yearsOfExperience > 1) {
       if (item.lastName == null && item.firstName==null) {
-        let l1 = new Names("", item.tech);
+        let l1 ={
+          fullName:"",
+          tech: item.tech
+         }
         cvarr.push(l1);
 
       } else if(item.lastName == null) {
-        let l1 = new Names(item.firstName , item.tech);
+        let l1 ={
+          fullName:item.firstName,
+          tech: item.tech
+
+        }
         cvarr.push(l1);
       }else if( item.firstName==null){
-        let l1 = new Names(item.lastName, item.tech);
+        let l1 ={
+          fullName:item.lastName,
+          tech: item.tech
+        }
         cvarr.push(l1);
 
-      }else{ let l1 = new Names(item.firstName+" "+item.lastName, item.tech);
+      }else{
+         let l1 ={
+          fullName:item.firstName + " " + item.lastName,
+          tech: item.tech
+         } 
       cvarr.push(l1);
 
       }
@@ -137,6 +150,7 @@ const cvFormatter = (arr) => {
   }
   return cvarr;
 };
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
