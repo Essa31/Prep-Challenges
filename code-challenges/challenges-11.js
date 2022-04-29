@@ -17,14 +17,8 @@
 // 
 
 function square(arr) {
-    let reslt=[]
-    for(let i=0;i<arr.length;i++){
-        let square = arr[i]
-        square=square*square
-        reslt.push(square)
-    }
-   return reslt
-    
+    const map1 = arr.map(x => x * x);
+    return map1
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -63,15 +57,12 @@ function square(arr) {
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
 function fullName(arr) {
-    let allName=[]
-    for(let i=0;i<arr.length;i++){
-        let it =arr[i]
-        let fn= it.firstName +" " + it.lastName
-        allName.push(fn)
 
-    }
-    return allName
-    // write your code here
+let fullName=arr.map((Name)=> `${Name.firstName } ${Name.lastName}`)
+
+
+return fullName
+
 }
 // -------------------------------------------------------------------------------------------------------
 
