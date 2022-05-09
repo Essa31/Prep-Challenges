@@ -39,8 +39,9 @@
 // Output: 5
 
 const objectCounter = (obj) => {
-    const count = obj.reduce((counter, obj1) =>  counter += 1 , 0);
-
+    let cont =1
+     obj.reduce((obj1) =>  cont = cont +1 );
+return cont
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -60,8 +61,11 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-    return str.split("").reduce((rev, char) => char + rev, '');
-
+    let strspstr=str.split(" ")
+    let c1 =""
+    let rev=""
+    c1= strspstr.reduce((w1,w2) => w2 + " " +w1);
+   return c1
 }
 // -------------------------------------------------------------------------------------------------------
 
