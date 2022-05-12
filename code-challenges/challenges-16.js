@@ -34,16 +34,18 @@ const reverseString = (string) => {
 
 const detectFace = (arr) => {
     let reslt=[]
-    for (let i=0;i<arr.lenght;i++){
+    for (let i=0;i<arr.length;i++){
         let item=arr[i]
         if (item.includes("^_^") ) {
             reslt.push(item)
+            
         }
 
-    return reslt
+    
    
    
 }
+return reslt
 }
 // -------------------------------------------------------------------------------------------------------
 
