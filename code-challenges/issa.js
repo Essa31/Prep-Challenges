@@ -1,29 +1,20 @@
-function isPalindrome(str){
 
-if (str==" "){
-    return true
+function wordLength  (str)  {
+let spl=str.split(" ")
+console.log(spl)
+let len = spl.length;
+console.log("len",len)
+
+
+if(len%2!=0){
+    let middle =spl[(len-1)/2] ;
+console.log("middle",middle)
+let l =middle.split("")
+let lemd =l.length
+    return lemd
 }else{
-let lowercase=str.toLowerCase()
-
-const replaced = lowercase.replace(/[^a-z0-9]/gi, '')
-
-let strspstr=replaced.split("")
-
-let c1 =""
-
-c1= strspstr.reduce((w1,w2) => w2 + w1);
-
-if(c1==replaced){
-   return true
-
-}else{
-    return false
-}
-}
+   return 0
 }
 
-
-
-
-
-    console.log( isPalindrome("race a car"))
+}
+console.log(wordLength("You're gonna need a bigger boat"))
